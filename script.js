@@ -195,40 +195,40 @@ const translations = {
 // ═══════════════════════════════════════════════════════════════════════
 const translationsHTML = {
     pt: {
-        ctaH2:          'Detém a <span class="gold">Discrepância Crítica de Faturação</span>?',
-        h2Audit:        'Auditoria <span class="text-white">Fiscal & Compliance</span>',
-        h2Blockchain:   'Cadeia de Custódia Blockchain e <span class="text-white">Rastreabilidade (SHA-256)</span>',
-        h2System:       'Sistema <span class="text-white">UNIFED – PROBATUM v13.5.0-PURE</span>',
+        ctaH2:          `Detém a <span class="gold">Discrepância Crítica de Faturação</span>?`,
+        h2Audit:        `Auditoria <span class="text-white">Fiscal & Compliance</span>`,
+        h2Blockchain:   `Cadeia de Custódia Blockchain e <span class="text-white">Rastreabilidade (SHA-256)</span>`,
+        h2System:       `Sistema <span class="text-white">UNIFED – PROBATUM v13.5.0-PURE</span>`,
         // ── auditFeature2: outer span tem dois term-spans internos ────
-        auditFeature2:  '<span class="term" data-tooltip="Bank Transactions Over Reality - Base operacional real vs faturada">BTOR</span> vs <span class="term" data-tooltip="Base Tributável Faturada - Valor declarado em fatura">BTF</span>: Dupla discrepância',
+        auditFeature2:  `<span class="term" data-tooltip="Bank Transactions Over Reality - Base operacional real vs faturada">BTOR</span> vs <span class="term" data-tooltip="Base Tributável Faturada - Valor declarado em fatura">BTF</span>: Dupla discrepância`,
         // ── Quantum Card: span de detalhe com term-spans ─────────────
-        axis1Detail:    'Discrepância <span class="term" data-tooltip="Base Tributável Operacional Real (extratos)">BTOR</span> vs <span class="term" data-tooltip="Base Tributável Faturada (faturas)">BTF</span>',
+        axis1Detail:    `Discrepância <span class="term" data-tooltip="Base Tributável Operacional Real (extratos)">BTOR</span> vs <span class="term" data-tooltip="Base Tributável Faturada (faturas)">BTF</span>`,
         // ── Code blocks (pre): innerHTML = textContent puro ──────────
-        codeBlockAudit: '\n[INFO] SAF-T Bruto / Ganhos: 10.157,73 €\n[INFO] Comissões Extrato: 2.447,89 €\n[INFO] Faturas: 262,94 €\n[WARN] Discrepância Crítica (BTOR vs BTF): 2.184,95 € (89,26%)\n[WARN] IVA em falta (23%): 502,54 €\n[WARN] IVA em falta (6%): 131,10 €\n[VERDICT] Discrepância Crítica de Faturação (BTOR vs BTF) DETETADA',
-        codeBlockLedger:'\n0x8E239C061A5C6E834927183D29A0C4F3\n0x423A5D6210F9213456789ABCDEF0123\n│\n├─ Transação: 0x8E23... (ETH)\n├─ Timestamp: 2026-02-22 14:23:17 UTC\n├─ Mixer Detected: Tornado Cash\n└─ Wallet Cluster: 3 endereços relacionados',
+        codeBlockAudit: `\n[INFO] SAF-T Bruto / Ganhos: 10.157,73 €\n[INFO] Comissões Extrato: 2.447,89 €\n[INFO] Faturas: 262,94 €\n[WARN] Discrepância Crítica (BTOR vs BTF): 2.184,95 € (89,26%)\n[WARN] IVA em falta (23%): 502,54 €\n[WARN] IVA em falta (6%): 131,10 €\n[VERDICT] Discrepância Crítica de Faturação (BTOR vs BTF) DETETADA`,
+        codeBlockLedger:`\n0x8E239C061A5C6E834927183D29A0C4F3\n0x423A5D6210F9213456789ABCDEF0123\n│\n├─ Transação: 0x8E23... (ETH)\n├─ Timestamp: 2026-02-22 14:23:17 UTC\n├─ Mixer Detected: Tornado Cash\n└─ Wallet Cluster: 3 endereços relacionados`,
         // ── VDC Features h4 com term-spans internos ──────────────────
-        axis2Label:     'EIXO 2 · Motor Preditivo <span class="term" data-tooltip="Análise Temporal Forense — Reconstrução cronológica de fluxos financeiros com precisão de timestamp RFC 3161">ATF</span>',
-        axis3Label:     'EIXO 3 · Gatilho Processual: <span class="term" data-tooltip="Limbo Contabilístico — Transações documentadas nos extratos operacionais sem correspondência nos registos contabilísticos declarados">Limbo Contabilístico</span>',
-        axis4Label:     'EIXO 4 · Inversão do Ónus da Prova (<span class="term" data-tooltip="Art. 344.º n.º 2 CC — Inversão do ónus da prova quando a parte contrária impossibilita o cumprimento do ónus probatório">Art. 344.º n.º 2 CC</span>)',
-        custodyLabel:   'Cadeia de Custódia <span class="term" data-tooltip="SHA-256 — Função hash criptográfica de 256 bits per ISO/IEC 27037">SHA-256</span> · Conformidade <span class="term" data-tooltip="Digital Operational Resilience Act (EU 2022/2554)">DORA</span>',
+        axis2Label:     `EIXO 2 · Motor Preditivo <span class="term" data-tooltip="Análise Temporal Forense — Reconstrução cronológica de fluxos financeiros com precisão de timestamp RFC 3161">ATF</span>`,
+        axis3Label:     `EIXO 3 · Gatilho Processual: <span class="term" data-tooltip="Limbo Contabilístico — Transações documentadas nos extratos operacionais sem correspondência nos registos contabilísticos declarados">Limbo Contabilístico</span>`,
+        axis4Label:     `EIXO 4 · Inversão do Ónus da Prova (<span class="term" data-tooltip="Art. 344.º n.º 2 CC — Inversão do ónus da prova quando a parte contrária impossibilita o cumprimento do ónus probatório">Art. 344.º n.º 2 CC</span>)`,
+        custodyLabel:   `Cadeia de Custódia <span class="term" data-tooltip="SHA-256 — Função hash criptográfica de 256 bits per ISO/IEC 27037">SHA-256</span> · Conformidade <span class="term" data-tooltip="Digital Operational Resilience Act (EU 2022/2554)">DORA</span>`,
     },
     en: {
-        ctaH2:          'Do You Hold the <span class="gold">Critical Tax Erosion Discrepancy</span>?',
-        h2Audit:        'Algorithmic <span class="text-white">Fiscal Audit & Compliance</span>',
-        h2Blockchain:   'Blockchain Forensic Chain of Custody and <span class="text-white">RFC 3161 Timestamping (SHA-256)</span>',
-        h2System:       'System <span class="text-white">UNIFED – PROBATUM v13.5.0-PURE</span>',
+        ctaH2:          `Do You Hold the <span class="gold">Critical Tax Erosion Discrepancy</span>?`,
+        h2Audit:        `Algorithmic <span class="text-white">Fiscal Audit & Compliance</span>`,
+        h2Blockchain:   `Blockchain Forensic Chain of Custody and <span class="text-white">RFC 3161 Timestamping (SHA-256)</span>`,
+        h2System:       `System <span class="text-white">UNIFED – PROBATUM v13.5.0-PURE</span>`,
         // ── auditFeature2: outer span with inner term-spans ───────────
-        auditFeature2:  '<span class="term" data-tooltip="Bank Transactions Over Reality — Real operational base vs invoiced">BTOR</span> vs <span class="term" data-tooltip="Invoiced Tax Base — Declared invoice value">BTF</span>: Dual Discrepancy',
+        auditFeature2:  `<span class="term" data-tooltip="Bank Transactions Over Reality — Real operational base vs invoiced">BTOR</span> vs <span class="term" data-tooltip="Invoiced Tax Base — Declared invoice value">BTF</span>: Dual Discrepancy`,
         // ── Quantum Card: detail span with term-spans ─────────────────
-        axis1Detail:    'Discrepancy <span class="term" data-tooltip="Real Operational Taxable Base (extracts)">BTOR</span> vs <span class="term" data-tooltip="Invoiced Taxable Base (invoices)">BTF</span>',
+        axis1Detail:    `Discrepancy <span class="term" data-tooltip="Real Operational Taxable Base (extracts)">BTOR</span> vs <span class="term" data-tooltip="Invoiced Taxable Base (invoices)">BTF</span>`,
         // ── Code blocks (pre): innerHTML = pure text ──────────────────
-        codeBlockAudit: '\n[INFO] Gross SAF-T / Earnings: €10,157.73\n[INFO] Statement Commissions: €2,447.89\n[INFO] Invoices: €262.94\n[WARN] Critical Discrepancy (BTOR vs BTF): €2,184.95 (89.26%)\n[WARN] Missing VAT / Tax Gap (23%): €502.54\n[WARN] Missing VAT / Tax Gap (6%): €131.10\n[VERDICT] Critical Invoicing Discrepancy (BTOR vs BTF) DETECTED',
-        codeBlockLedger:'\n0x8E239C061A5C6E834927183D29A0C4F3\n0x423A5D6210F9213456789ABCDEF0123\n│\n├─ Transaction: 0x8E23... (ETH)\n├─ Timestamp: 2026-02-22 14:23:17 UTC\n├─ Mixer Detected: Tornado Cash\n└─ Wallet Cluster: 3 related addresses',
+        codeBlockAudit: `\n[INFO] Gross SAF-T / Earnings: €10,157.73\n[INFO] Statement Commissions: €2,447.89\n[INFO] Invoices: €262.94\n[WARN] Critical Discrepancy (BTOR vs BTF): €2,184.95 (89.26%)\n[WARN] Missing VAT / Tax Gap (23%): €502.54\n[WARN] Missing VAT / Tax Gap (6%): €131.10\n[VERDICT] Critical Invoicing Discrepancy (BTOR vs BTF) DETECTED`,
+        codeBlockLedger:`\n0x8E239C061A5C6E834927183D29A0C4F3\n0x423A5D6210F9213456789ABCDEF0123\n│\n├─ Transaction: 0x8E23... (ETH)\n├─ Timestamp: 2026-02-22 14:23:17 UTC\n├─ Mixer Detected: Tornado Cash\n└─ Wallet Cluster: 3 related addresses`,
         // ── VDC Features h4 with inner term-spans ────────────────────
-        axis2Label:     'AXIS 2 · ATF Predictive Engine <span class="term" data-tooltip="Analytical Temporal Forensics — Chronological reconstruction of financial flows with RFC 3161 Timestamping precision">ATF</span>',
-        axis3Label:     'AXIS 3 · Procedural Trigger: <span class="term" data-tooltip="Accounting Limbo — Transactions documented in operational extracts with no corresponding declared accounting records">Accounting Limbo</span>',
-        axis4Label:     'AXIS 4 · Reversal of the Burden of Proof (<span class="term" data-tooltip="Civil Code Art. 344(2) — Reversal of the burden of proof when the opposing party prevents compliance with the evidentiary burden">Art. 344(2) CC</span>)',
-        custodyLabel:   'Forensic Chain of Custody <span class="term" data-tooltip="SHA-256 — 256-bit cryptographic hash function per ISO/IEC 27037">SHA-256</span> · <span class="term" data-tooltip="Digital Operational Resilience Act (EU 2022/2554)">DORA</span> Compliance',
+        axis2Label:     `AXIS 2 · ATF Predictive Engine <span class="term" data-tooltip="Analytical Temporal Forensics — Chronological reconstruction of financial flows with RFC 3161 Timestamping precision">ATF</span>`,
+        axis3Label:     `AXIS 3 · Procedural Trigger: <span class="term" data-tooltip="Accounting Limbo — Transactions documented in operational extracts with no corresponding declared accounting records">Accounting Limbo</span>`,
+        axis4Label:     `AXIS 4 · Reversal of the Burden of Proof (<span class="term" data-tooltip="Civil Code Art. 344(2) — Reversal of the burden of proof when the opposing party prevents compliance with the evidentiary burden">Art. 344(2) CC</span>)`,
+        custodyLabel:   `Forensic Chain of Custody <span class="term" data-tooltip="SHA-256 — 256-bit cryptographic hash function per ISO/IEC 27037">SHA-256</span> · <span class="term" data-tooltip="Digital Operational Resilience Act (EU 2022/2554)">DORA</span> Compliance`,
     }
 };
 
@@ -952,14 +952,14 @@ function buildReportTemplate(lang) {
 
 
             <h2>6.2 PROJEÇÃO MACROECONÓMICA DO DANO</h2>
-            <p>A extrapolação da discrepância individual documentada ao universo do mercado de operadores de plataforma digital em Portugal (estimativa: 38.000 condutores ativos) permite quantificar o dano sistémico nos seguintes termos:</p>
+            <p>A extrapolação da discrepância individual documentada ao universo do mercado de operadores de plataforma digital em Portugal (estimativa: 38.000 condutores ativos) permite quantificar o dano sistémico:</p>
             <ul style="list-style-type: disc; margin-left: 20px;">
                 <li><strong>Média Mensal Individual:</strong> <strong>364,16 €</strong> por operador</li>
                 <li><strong>Impacto Mensal no Mercado (38k operadores):</strong> <strong>13.838.016,67 €</strong></li>
                 <li><strong>Impacto Anual no Mercado:</strong> <strong>166.056.200,00 €</strong></li>
                 <li><strong>Impacto Retroativo 7 Anos:</strong> <strong>1.162.393.400,00 €</strong></li>
             </ul>
-            <p><em>Nota Metodológica:</em> Projeção baseada nos valores individuais forenses apurados e aplicados a estimativa de mercado. Constitui indício de dano sistémico de escala nacional, relevante para efeitos de participação à Autoridade Tributária e Aduaneira nos termos do art. 59.º, n.º 1 da LGT.</p>
+            <p><em>Nota Metodológica:</em> Projeção baseada nos valores forenses individuais apurados, aplicados à estimativa de mercado. Constitui indício de dano sistémico de escala nacional, relevante para efeitos de participação à AT nos termos do art. 59.º, n.º 1 da LGT.</p>
 
             <div class="report-footer-signature">
                 <strong>Ass. Consultor Técnico</strong>
@@ -1077,7 +1077,7 @@ function buildReportTemplate(lang) {
                 <li><strong>Annual Market Impact:</strong> <strong>€166,056,200.00</strong></li>
                 <li><strong>Retroactive 7-Year Impact:</strong> <strong>€1,162,393,400.00</strong></li>
             </ul>
-            <p><em>Methodological Note:</em> Projection based on forensically established individual values applied to market-size estimate. Constitutes prima facie evidence of systemic damage at national scale, relevant for referral to the Tax Authority pursuant to General Tax Law Art. 59(1).</p>
+            <p><em>Methodological Note:</em> Projection based on forensically established individual values applied to market-size estimate. Prima facie evidence of systemic damage at national scale, relevant for referral to the Tax Authority pursuant to General Tax Law Art. 59(1).</p>
 
             <div class="report-footer-signature">
                 <strong>Assoc. Technical Consultant</strong>
