@@ -8,8 +8,6 @@
 // Idioma atual (padrão: PT) — declarado no escopo global para acesso por handlers HTML inline
 let currentLanguage = 'pt';
 
-try {
-
 // ═══════════════════════════════════════════════════════════════════════
 // i18n · BLOCO 1 — translations
 // Chaves correspondem a id="<chave>" no DOM.
@@ -314,6 +312,7 @@ function switchLanguage() {
 
     console.log(`[NEXUS-LANG] Idioma alterado para: ${currentLanguage.toUpperCase()}`);
 }
+window.switchLanguage = switchLanguage;
 
 function updateLangToggleState() {
     const ptOption = document.querySelector('.lang-option[data-lang="pt"]');
@@ -525,6 +524,25 @@ if (terminalLine) {
 // ============================================================================
 // 4. DROPZONE SIMULADO (CADEIA DE CUSTÓDIA)
 // ============================================================================
+// ============================================================================
+// DROPZONE — handleFileSelect (global para ondrop HTML)
+// ============================================================================
+function handleFileSelect(e) {
+    e.preventDefault();
+    const hashSimEl = document.getElementById('hashSimulation');
+    const dz        = document.getElementById('evidenceDropzone');
+    const dummyHash = 'SHA-256: ' + Array.from({length: 64}, () =>
+        Math.floor(Math.random() * 16).toString(16)).join('');
+    if (hashSimEl) hashSimEl.textContent = dummyHash;
+    if (dz) {
+        dz.classList.add('dropped');
+        dz.style.transform = 'scale(0.98)';
+        setTimeout(() => { dz.style.transform = 'scale(1)'; }, 200);
+    }
+    showToast(uiStrings[currentLanguage].custodySimulated, 'success');
+}
+window.handleFileSelect = handleFileSelect;
+
 const dropzone      = document.getElementById('evidenceDropzone');
 const hashSimulation = document.getElementById('hashSimulation');
 
@@ -549,16 +567,7 @@ if (dropzone) {
         }, false);
     });
 
-    dropzone.addEventListener('drop', (e) => {
-        e.preventDefault();
-        const dummyHash = 'SHA-256: ' + Array.from({length: 64}, () =>
-            Math.floor(Math.random() * 16).toString(16)).join('');
-        hashSimulation.textContent = dummyHash;
-        dropzone.classList.add('dropped');
-        showToast(uiStrings[currentLanguage].custodySimulated, 'success');
-        dropzone.style.transform = 'scale(0.98)';
-        setTimeout(() => { dropzone.style.transform = 'scale(1)'; }, 200);
-    });
+    dropzone.addEventListener('drop', handleFileSelect);
 
     dropzone.addEventListener('click', () => {
         const dummyHash = 'SHA-256: ' + Array.from({length: 64}, () =>
@@ -803,6 +812,7 @@ function openProtocol(id) {
         console.log(`%c[NEXUS] Protocolo aberto: ${id} - ${proto.title}`, 'color: #c5a059; font-family: monospace;');
     }
 }
+window.openProtocol = openProtocol;
 
 function closeProtocol() {
     const modal = document.getElementById('protocolModal');
@@ -811,6 +821,7 @@ function closeProtocol() {
         document.body.style.overflow = 'auto';
     }
 }
+window.closeProtocol = closeProtocol;
 
 // ============================================================================
 // 10. VISUALIZADOR DE RELATÓRIO FORENSE
@@ -952,14 +963,14 @@ function buildReportTemplate(lang) {
 
 
             <h2>6.2 PROJEÇÃO MACROECONÓMICA DO DANO</h2>
-            <p>A extrapolação da discrepância individual documentada ao universo do mercado de operadores de plataforma digital em Portugal (estimativa: 38.000 condutores ativos) permite quantificar o dano sistémico:</p>
+            <p>Extrapolação da discrepância individual ao universo de operadores de plataforma digital em Portugal (estimativa: 38.000 condutores ativos):</p>
             <ul style="list-style-type: disc; margin-left: 20px;">
-                <li><strong>Média Mensal Individual:</strong> <strong>364,16 €</strong> por operador</li>
-                <li><strong>Impacto Mensal no Mercado (38k operadores):</strong> <strong>13.838.016,67 €</strong></li>
+                <li><strong>Média Mensal Individual:</strong> <strong>364,16 €</strong></li>
+                <li><strong>Impacto Mensal no Mercado (38k):</strong> <strong>13.838.016,67 €</strong></li>
                 <li><strong>Impacto Anual no Mercado:</strong> <strong>166.056.200,00 €</strong></li>
                 <li><strong>Impacto Retroativo 7 Anos:</strong> <strong>1.162.393.400,00 €</strong></li>
             </ul>
-            <p><em>Nota Metodológica:</em> Projeção baseada nos valores forenses individuais apurados, aplicados à estimativa de mercado. Constitui indício de dano sistémico de escala nacional, relevante para efeitos de participação à AT nos termos do art. 59.º, n.º 1 da LGT.</p>
+            <p><em>Nota:</em> Indício de dano sistémico nacional — relevante para participação à AT (art. 59.º, n.º 1 LGT).</p>
 
             <div class="report-footer-signature">
                 <strong>Ass. Consultor Técnico</strong>
@@ -1070,14 +1081,14 @@ function buildReportTemplate(lang) {
 
 
             <h2>6.2 MACROECONOMIC DAMAGE PROJECTION</h2>
-            <p>Extrapolating the documented individual discrepancy to the full population of digital platform operators in Portugal (estimate: 38,000 active drivers) yields the following systemic damage quantification:</p>
+            <p>Extrapolation of the individual discrepancy to the full population of digital platform operators in Portugal (estimate: 38,000 active drivers):</p>
             <ul style="list-style-type: disc; margin-left: 20px;">
-                <li><strong>Individual Monthly Average:</strong> <strong>€364.16</strong> per operator</li>
-                <li><strong>Monthly Market Impact (38k operators):</strong> <strong>€13,838,016.67</strong></li>
+                <li><strong>Individual Monthly Average:</strong> <strong>€364.16</strong></li>
+                <li><strong>Monthly Market Impact (38k):</strong> <strong>€13,838,016.67</strong></li>
                 <li><strong>Annual Market Impact:</strong> <strong>€166,056,200.00</strong></li>
                 <li><strong>Retroactive 7-Year Impact:</strong> <strong>€1,162,393,400.00</strong></li>
             </ul>
-            <p><em>Methodological Note:</em> Projection based on forensically established individual values applied to market-size estimate. Prima facie evidence of systemic damage at national scale, relevant for referral to the Tax Authority pursuant to General Tax Law Art. 59(1).</p>
+            <p><em>Note:</em> Prima facie evidence of systemic damage at national scale (General Tax Law Art. 59(1)).</p>
 
             <div class="report-footer-signature">
                 <strong>Assoc. Technical Consultant</strong>
@@ -1100,6 +1111,7 @@ function openForensicReport() {
 
     console.log('%c[NEXUS] Visualizador de relatório forense PURE aberto', 'color: #4a90e2; font-family: monospace;');
 }
+window.openForensicReport = openForensicReport;
 
 function closeForensicReport() {
     const reportOverlay = document.getElementById('reportOverlay');
@@ -1108,6 +1120,7 @@ function closeForensicReport() {
         document.body.style.overflow = 'auto';
     }
 }
+window.closeForensicReport = closeForensicReport;
 
 // ============================================================================
 // 11. INICIALIZAÇÃO
@@ -1132,6 +1145,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2000);
 });
 
+
+// ============================================================================
+// FOOTER LINKS — binding programático (reforço dos onclick inline)
+// ============================================================================
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.footer-links a[data-protocol]').forEach(function(link) {
+        link.onclick = function() {
+            openProtocol(this.getAttribute('data-protocol'));
+            return false;
+        };
+    });
+});
 // ============================================================================
 // 12. FECHAR MODAL CLICANDO FORA
 // ============================================================================
@@ -1143,25 +1168,4 @@ window.onclick = function(event) {
     if (event.target === reportOverlay) { closeForensicReport(); }
 };
 
-// ============================================================================
-// 13. EXPOR FUNÇÕES GLOBALMENTE
-// ============================================================================
 
-// Exposição PRIMÁRIA — window.switchLanguage declarado antes de qualquer outro export
-// para garantir disponibilidade imediata ao parser inline do HTML (onclick="switchLanguage()")
-window.switchLanguage = switchLanguage;
-
-window.openProtocol        = openProtocol;
-window.closeProtocol       = closeProtocol;
-window.openForensicReport  = openForensicReport;
-window.closeForensicReport = closeForensicReport;
-
-// Exposição REDUNDANTE final — garante persistência após qualquer re-avaliação do scope
-window.switchLanguage = switchLanguage;
-
-} catch (err) {
-    // ── Captura de erros de execução — visível na consola do browser em produção
-    console.error('[NEXUS] Erro de inicialização UNIFED – PROBATUM v13.5.0-PURE:', err);
-    // Garante que switchLanguage permanece acessível mesmo em caso de erro parcial
-    if (typeof switchLanguage === 'function') { window.switchLanguage = switchLanguage; }
-}

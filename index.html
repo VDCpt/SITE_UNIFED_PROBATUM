@@ -63,7 +63,7 @@
             <p class="hero-subtitle" id="heroSubtitle">Especialização em Peritagem Forense e Inteligência Económico-Financeira para o Setor Jurídico de Elite.</p>
             
             <!-- Dropzone Simulado (Demonstração de Cadeia de Custódia) -->
-            <div class="evidence-dropzone" id="evidenceDropzone">
+            <div class="evidence-dropzone" id="evidenceDropzone" ondragover="event.preventDefault()" ondrop="handleFileSelect(event)">
                 <i class="fas fa-cloud-upload-alt"></i>
                 <span id="dropzoneText">Arraste um ficheiro para simular cadeia de custódia</span>
                 <div class="hash-simulation" id="hashSimulation"></div>
