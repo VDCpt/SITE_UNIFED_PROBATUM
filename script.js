@@ -69,9 +69,11 @@ const translations = {
         // ── Terminal estático ────────────────────────────────────────
         terminalStaticLine:     '[LOAD] Módulo de triangulação financeira',
         // ── Secção Auditoria ──────────────────────────────────────────
+        auditDesc:              'Processamento de estruturas SAF-T e conformidade DAC7 com precisão de nível pericial. Identificação de anomalias fiscais e reconstrução de fluxos financeiros complexos através do motor forense UNIFED – PROBATUM v13.5.0-PURE.',
         auditFeature1:          'Extração dinâmica de dados (Fleet Extract)',
         auditFeature3:          'Diferenciação IVA 6% (transporte) / 23% (intermediação)',
         // ── Secção Blockchain ─────────────────────────────────────────
+        blockchainDesc:         'Rastreio de ativos em ambientes descentralizados. Inteligência aplicada à recuperação de ativos e desarticulação de esquemas de branqueamento de capitais em Blockchain com validação SHA-256 e cadeia de custódia forense.',
         blockchainFeature1:     'Rastreio cross-chain (BTC, ETH, BSC, SOL)',
         blockchainFeature2:     'Deteção de mixers e privacy coins',
         blockchainFeature3:     'Relatório pericial com selo temporal RFC 3161',
@@ -81,7 +83,14 @@ const translations = {
         vat23Label:             'IVA 23% em Análise:',
         vat6Label:              'IVA 6% em Análise:',
         // ── VDC Features (EIXOS 2-4 + Custódia) ─────────────────────
+        axis2Desc:              'Reconstrução cronológica de fluxos. Deteção de padrões sazonais e gaps de registo. Timestamp RFC 3161 imutável.',
+        axis3Desc:              'Identificação de transações sem correspondência SAF-T. Diferencial BTOR/BTF documentado como omissão objetiva.',
+        axis4Desc:              'Constituição de presunção probatória material. Fundamentação para transferência do ónus ao arguido perante o douto tribunal.',
         custodyDesc:            'ISO/IEC 27037 · DL 28/2019 · RGIT · UE 2022/2554 · QR de integridade pericial',
+        monthlyAvgLabel:        'Média Mensal (Individual):',
+        monthlyMktLabel:        'Impacto Mensal Mercado (38k):',
+        annualMktLabel:         'Impacto Anual Mercado:',
+        impact7yLabel:          'IMPACTO 7 ANOS (Retroativo):',
         // ── Report Overlay ───────────────────────────────────────────
         reportModeLabel:        'MODO DE VISUALIZAÇÃO PROTEGIDA · DOCUMENTO NÃO DESCARREGÁVEL',
         btnCloseReport:         'FECHAR',
@@ -149,9 +158,11 @@ const translations = {
         // ── Static terminal ───────────────────────────────────────────
         terminalStaticLine:     '[LOAD] Financial Triangulation Module',
         // ── Audit section ─────────────────────────────────────────────
+        auditDesc:              'SAF-T Structure Processing and DAC7 Compliance with expert-level precision. Tax anomaly identification and complex Financial Flow Reconstruction via the UNIFED – PROBATUM v13.5.0-PURE forensic engine.',
         auditFeature1:          'Dynamic Data Extraction (Fleet Extract)',
         auditFeature3:          'VAT Differentiation: 6% (Transport) / 23% (Intermediation)',
         // ── Blockchain section ────────────────────────────────────────
+        blockchainDesc:         'Asset Tracing in decentralised environments. Applied intelligence for Asset Recovery and Dismantling of Money Laundering Schemes on Blockchain with SHA-256 validation and Forensic Chain of Custody.',
         blockchainFeature1:     'Cross-chain Tracking (BTC, ETH, BSC, SOL)',
         blockchainFeature2:     'Mixers & Privacy Coins Detection',
         blockchainFeature3:     'Forensic report with RFC 3161 Timestamping',
@@ -161,7 +172,14 @@ const translations = {
         vat23Label:             'VAT 23% Under Analysis:',
         vat6Label:              'VAT 6% Under Analysis:',
         // ── VDC Features (AXES 2-4 + Custody) ────────────────────────
+        axis2Desc:              'Chronological Flow Reconstruction. Seasonal pattern detection and Record Gaps / Log Gaps. Immutable RFC 3161 Timestamping.',
+        axis3Desc:              'Identification of Unmatched Transactions in SAF-T. BTOR/BTF differential documented as Objective Omission.',
+        axis4Desc:              'Establishment of Substantive Evidentiary Presumption. Grounds for Shifting the Burden to the Defendant before the Learned Court.',
         custodyDesc:            'ISO/IEC 27037 · DL 28/2019 · RGIT · EU 2022/2554 · Forensic integrity QR code',
+        monthlyAvgLabel:        'Monthly Average (Individual):',
+        monthlyMktLabel:        'Monthly Market Impact (38k):',
+        annualMktLabel:         'Annual Market Impact:',
+        impact7yLabel:          '7-YEAR RETROACTIVE IMPACT:',
         // ── Report Overlay ────────────────────────────────────────────
         reportModeLabel:        'PROTECTED VIEWING MODE · DOCUMENT NOT DOWNLOADABLE',
         btnCloseReport:         'CLOSE',
@@ -199,12 +217,6 @@ const translationsHTML = {
         axis3Label:     `EIXO 3 · Gatilho Processual: <span class="term" data-tooltip="Limbo Contabilístico — Transações documentadas nos extratos operacionais sem correspondência nos registos contabilísticos declarados">Limbo Contabilístico</span>`,
         axis4Label:     `EIXO 4 · Inversão do Ónus da Prova (<span class="term" data-tooltip="Art. 344.º n.º 2 CC — Inversão do ónus da prova quando a parte contrária impossibilita o cumprimento do ónus probatório">Art. 344.º n.º 2 CC</span>)`,
         custodyLabel:   `Cadeia de Custódia <span class="term" data-tooltip="SHA-256 — Função hash criptográfica de 256 bits per ISO/IEC 27037">SHA-256</span> · Conformidade <span class="term" data-tooltip="Digital Operational Resilience Act (EU 2022/2554)">DORA</span>`,
-        // ── Parágrafos com HTML interno (substituição total via innerHTML) ──
-        auditDesc:      `Processamento de estruturas <strong>SAF-T</strong> e conformidade <strong>DAC7</strong> com precisão de nível pericial. Identificação de anomalias fiscais e reconstrução de fluxos financeiros complexos através do motor forense UNIFED – PROBATUM v13.5.0-PURE.`,
-        blockchainDesc: `Rastreio de ativos em ambientes descentralizados. Inteligência aplicada à recuperação de ativos e desarticulação de esquemas de branqueamento de capitais em <strong>Blockchain</strong> com validação <span class="term" data-tooltip="Secure Hash Algorithm 256-bit - Padrão criptográfico para integridade de dados">SHA-256</span> e cadeia de custódia forense.`,
-        axis2Desc:      `<span id="axis2Sub1">Reconstrução cronológica</span> de fluxos. Deteção de padrões sazonais e <span id="axis2Sub2">gaps de registo</span>. Timestamp RFC 3161 imutável.`,
-        axis3Desc:      `Identificação de <span id="axis3Sub1">transações sem correspondência</span> SAF-T. Diferencial BTOR/BTF documentado como <span id="axis3Sub2">omissão objetiva</span>.`,
-        axis4Desc:      `Constituição de <span id="axis4Sub1">presunção probatória material</span>. Fundamentação para <span id="axis4Sub2">transferência do ónus ao arguido</span> <span id="axis4Sub3">perante o douto tribunal</span>.`,
     },
     en: {
         ctaH2:          `Do You Hold the <span class="gold">Critical Tax Erosion Discrepancy</span>?`,
@@ -223,12 +235,6 @@ const translationsHTML = {
         axis3Label:     `AXIS 3 · Procedural Trigger: <span class="term" data-tooltip="Accounting Limbo — Transactions documented in operational extracts with no corresponding declared accounting records">Accounting Limbo</span>`,
         axis4Label:     `AXIS 4 · Reversal of the Burden of Proof (<span class="term" data-tooltip="Civil Code Art. 344(2) — Reversal of the burden of proof when the opposing party prevents compliance with the evidentiary burden">Art. 344(2) CC</span>)`,
         custodyLabel:   `Forensic Chain of Custody <span class="term" data-tooltip="SHA-256 — 256-bit cryptographic hash function per ISO/IEC 27037">SHA-256</span> · <span class="term" data-tooltip="Digital Operational Resilience Act (EU 2022/2554)">DORA</span> Compliance`,
-        // ── Paragraphs with inner HTML (full replacement via innerHTML) ──
-        auditDesc:      `SAF-T Structure Processing and <strong>DAC7</strong> Compliance with expert-level precision. Tax anomaly identification and complex Financial Flow Reconstruction via the UNIFED – PROBATUM v13.5.0-PURE forensic engine.`,
-        blockchainDesc: `Asset Tracing in decentralised environments. Applied intelligence for Asset Recovery and Dismantling of Money Laundering Schemes on <strong>Blockchain</strong> with <span class="term" data-tooltip="SHA-256 — 256-bit cryptographic hash function per ISO/IEC 27037">SHA-256</span> validation and Forensic Chain of Custody.`,
-        axis2Desc:      `<span id="axis2Sub1">Chronological Flow Reconstruction</span> of flows. Seasonal pattern detection and <span id="axis2Sub2">Record Gaps / Log Gaps</span>. Immutable RFC 3161 Timestamping.`,
-        axis3Desc:      `Identification of <span id="axis3Sub1">Unmatched Transactions</span> in SAF-T. BTOR/BTF differential documented as <span id="axis3Sub2">Objective Omission</span>.`,
-        axis4Desc:      `Establishment of <span id="axis4Sub1">Substantive Evidentiary Presumption</span>. Grounds for <span id="axis4Sub2">Shifting the Burden to the Defendant</span> <span id="axis4Sub3">before the Learned Court</span>.`,
     }
 };
 
