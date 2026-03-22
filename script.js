@@ -49,7 +49,7 @@ const translations = {
         ctaDesc:                'A Reconstituição da Verdade Material Digital resolve a causa. Consultoria estratégica para Sociedades de Advogados.',
         footerTagline:          'Unidade Independente de Inteligência Forense Económica e Financeira',
         // ── Metadados de sistema / Rodapé ─────────────────────────────
-        footerIntegrity:        'VALIDAÇÃO DE INTEGRIDADE DO SISTEMA · MASTER HASH SHA-256',
+        footerIntegrity:        'VALIDAÇÃO DE INTEGRIDADE DO SISTEMA · MASTER HASH SHA-256: a7b5032dcc5848ddcca324cf0d38e39e82f13001641bc4d0a17f5b6d94c0aa94',
         footerNote:             'Análise preliminar confidencial · Decreto-Lei n.º 28/2019',
         footerConsulting:       'Consultoria de Gestão e Auditoria Forense',
         footerRights:           'Todos os direitos reservados',
@@ -134,7 +134,7 @@ const translations = {
         ctaDesc:                'Material Truth Reconstitution resolves the case. Strategic consultancy for Law Firms.',
         footerTagline:          'Independent Unit of Economic and Financial Forensic Intelligence',
         // ── System metadata / Footer ──────────────────────────────────
-        footerIntegrity:        'SYSTEM INTEGRITY VALIDATION · MASTER HASH SHA-256',
+        footerIntegrity:        'SYSTEM INTEGRITY VALIDATION · MASTER HASH SHA-256: a7b5032dcc5848ddcca324cf0d38e39e82f13001641bc4d0a17f5b6d94c0aa94',
         footerNote:             'Confidential Preliminary Analysis · Decree-Law 28/2019',
         footerConsulting:       'Management Consulting & Forensic Audit',
         footerRights:           'All rights reserved',
