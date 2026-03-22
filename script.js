@@ -1168,4 +1168,15 @@ window.onclick = function(event) {
     if (event.target === reportOverlay) { closeForensicReport(); }
 };
 
-
+// ============================================================================
+// DROPZONE SAFETY NET — ligação robusta independente do estado do resto do script
+// Garante funcionamento mesmo que o bloco de inicialização principal falhe.
+// ============================================================================
+const dropzone = document.getElementById('dropzone');
+if(dropzone) {
+    dropzone.addEventListener('dragover', (e) => { e.preventDefault(); });
+    dropzone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        handleFileSelect(e);
+    });
+}
