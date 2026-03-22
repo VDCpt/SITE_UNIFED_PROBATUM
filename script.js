@@ -49,7 +49,7 @@ const translations = {
         ctaDesc:                'A Reconstituição da Verdade Material Digital resolve a causa. Consultoria estratégica para Sociedades de Advogados.',
         footerTagline:          'Unidade Independente de Inteligência Forense Económica e Financeira',
         // ── Metadados de sistema / Rodapé ─────────────────────────────
-        footerIntegrity:        'VALIDAÇÃO DE INTEGRIDADE DO SISTEMA · MASTER HASH SHA-256: a7b5032dcc5848ddcca324cf0d38e39e82f13001641bc4d0a17f5b6d94c0aa94',
+        footerIntegrity:        'VALIDAÇÃO DE INTEGRIDADE DO SISTEMA · MASTER HASH SHA-256: 65F805D9649D8C90B042D675B86C703832D847683E2D0FCA9B86C0E82FA20991',
         footerNote:             'Análise preliminar confidencial · Decreto-Lei n.º 28/2019',
         footerConsulting:       'Consultoria de Gestão e Auditoria Forense',
         footerRights:           'Todos os direitos reservados',
@@ -134,7 +134,7 @@ const translations = {
         ctaDesc:                'Material Truth Reconstitution resolves the case. Strategic consultancy for Law Firms.',
         footerTagline:          'Independent Unit of Economic and Financial Forensic Intelligence',
         // ── System metadata / Footer ──────────────────────────────────
-        footerIntegrity:        'SYSTEM INTEGRITY VALIDATION · MASTER HASH SHA-256: a7b5032dcc5848ddcca324cf0d38e39e82f13001641bc4d0a17f5b6d94c0aa94',
+        footerIntegrity:        'SYSTEM INTEGRITY VALIDATION · MASTER HASH SHA-256: 65F805D9649D8C90B042D675B86C703832D847683E2D0FCA9B86C0E82FA20991',
         footerNote:             'Confidential Preliminary Analysis · Decree-Law 28/2019',
         footerConsulting:       'Management Consulting & Forensic Audit',
         footerRights:           'All rights reserved',
@@ -204,7 +204,7 @@ const translationsHTML = {
         // ── Quantum Card: span de detalhe com term-spans ─────────────
         axis1Detail:    'Discrepância <span class="term" data-tooltip="Base Tributável Operacional Real (extratos)">BTOR</span> vs <span class="term" data-tooltip="Base Tributável Faturada (faturas)">BTF</span>',
         // ── Code blocks (pre): innerHTML = textContent puro ──────────
-        codeBlockAudit: '\n[INFO] SAF-T Bruto: 333.739,00 €\n[INFO] Ganhos: 404.925,00 €\n[INFO] Comissões Extrato: 93.812,00 €\n[INFO] Faturas: 36.154,00 €\n[WARN] Discrepância Crítica (BTOR vs BTF): 57.658,00 € (61.46%)\n[WARN] IVA em falta (23%): 13.261,34 €\n[WARN] IVA em falta (6%): 3.459,48 €\n[VERDICT] Discrepância Crítica de Faturação (BTOR vs BTF) DETETADA',
+        codeBlockAudit: '\n[INFO] SAF-T Bruto / Ganhos: 10.157,73 €\n[INFO] Comissões Extrato: 2.447,89 €\n[INFO] Faturas: 262,94 €\n[WARN] Discrepância Crítica (BTOR vs BTF): 2.184,95 € (89,26%)\n[WARN] IVA em falta (23%): 502,54 €\n[WARN] IVA em falta (6%): 131,10 €\n[VERDICT] Discrepância Crítica de Faturação (BTOR vs BTF) DETETADA',
         codeBlockLedger:'\n0x8E239C061A5C6E834927183D29A0C4F3\n0x423A5D6210F9213456789ABCDEF0123\n│\n├─ Transação: 0x8E23... (ETH)\n├─ Timestamp: 2026-02-22 14:23:17 UTC\n├─ Mixer Detected: Tornado Cash\n└─ Wallet Cluster: 3 endereços relacionados',
         // ── VDC Features h4 com term-spans internos ──────────────────
         axis2Label:     'EIXO 2 · Motor Preditivo <span class="term" data-tooltip="Análise Temporal Forense — Reconstrução cronológica de fluxos financeiros com precisão de timestamp RFC 3161">ATF</span>',
@@ -222,7 +222,7 @@ const translationsHTML = {
         // ── Quantum Card: detail span with term-spans ─────────────────
         axis1Detail:    'Discrepancy <span class="term" data-tooltip="Real Operational Taxable Base (extracts)">BTOR</span> vs <span class="term" data-tooltip="Invoiced Taxable Base (invoices)">BTF</span>',
         // ── Code blocks (pre): innerHTML = pure text ──────────────────
-        codeBlockAudit: '\n[INFO] Gross SAF-T: €333,739.00\n[INFO] Earnings: €404,925.00\n[INFO] Statement Commissions: €93,812.00\n[INFO] Invoices: €36,154.00\n[WARN] Critical Discrepancy (BTOR vs BTF): €57,658.00 (61.46%)\n[WARN] Missing VAT / Tax Gap (23%): €13,261.34\n[WARN] Missing VAT / Tax Gap (6%): €3,459.48\n[VERDICT] Critical Invoicing Discrepancy (BTOR vs BTF) DETECTED',
+        codeBlockAudit: '\n[INFO] Gross SAF-T / Earnings: €10,157.73\n[INFO] Statement Commissions: €2,447.89\n[INFO] Invoices: €262.94\n[WARN] Critical Discrepancy (BTOR vs BTF): €2,184.95 (89.26%)\n[WARN] Missing VAT / Tax Gap (23%): €502.54\n[WARN] Missing VAT / Tax Gap (6%): €131.10\n[VERDICT] Critical Invoicing Discrepancy (BTOR vs BTF) DETECTED',
         codeBlockLedger:'\n0x8E239C061A5C6E834927183D29A0C4F3\n0x423A5D6210F9213456789ABCDEF0123\n│\n├─ Transaction: 0x8E23... (ETH)\n├─ Timestamp: 2026-02-22 14:23:17 UTC\n├─ Mixer Detected: Tornado Cash\n└─ Wallet Cluster: 3 related addresses',
         // ── VDC Features h4 with inner term-spans ────────────────────
         axis2Label:     'AXIS 2 · ATF Predictive Engine <span class="term" data-tooltip="Analytical Temporal Forensics — Chronological reconstruction of financial flows with RFC 3161 Timestamping precision">ATF</span>',
@@ -493,7 +493,7 @@ const forensicActionsI18n = {
         '[LOAD] Módulo ATF — Score de Persistência Temporal',
         '[MATCH] DAC7 vs SAF-T Recon · Delta calculado',
         '[RUNNING] Análise Determinística de Discrepâncias BTOR/BTF',
-        '[VERDICT] Limbo Contabilístico Documentado · 57.658,00 €',
+        '[VERDICT] Limbo Contabilístico Documentado · 2.184,95 €',
         '[VERIFYING] Cadeia de Custódia Forense SHA-256 · RFC 3161',
         '[COMPLETE] Inversão do Ónus da Prova · Art. 344.º n.º 2 CC',
     ],
@@ -502,7 +502,7 @@ const forensicActionsI18n = {
         '[LOAD] ATF Module — Temporal Persistence Score',
         '[MATCH] DAC7 vs SAF-T Recon · Delta computed',
         '[RUNNING] Deterministic Discrepancy Analysis BTOR vs BTF',
-        '[VERDICT] Accounting Limbo Documented · €57,658.00',
+        '[VERDICT] Accounting Limbo Documented · €2,184.95',
         '[VERIFYING] Forensic Chain of Custody SHA-256 · RFC 3161 Timestamping',
         '[COMPLETE] Reversal of the Burden of Proof · Civil Code Art. 344(2)',
     ]
@@ -626,18 +626,18 @@ function typeWriterEffect() {
         pt: [
             'UNIFED – PROBATUM v13.5.0-PURE · DORA COMPLIANT · COURT READY inicializando...',
             'Módulo ATF — Análise Temporal Forense ativo',
-            'SHA-256: d235004a4b463aeb136e6ff208bf7900 · RFC 3161 selado',
+            'SHA-256: 65F805D9649D8C90B042D675B86C703832D847683E2D0FCA9B86C0E82FA20991 · RFC 3161 selado',
             'DAC7 vs SAF-T Recon — Cadeia de Custódia Forense estabelecida',
-            'Limbo Contabilístico · Discrepância BTOR vs BTF: 57.658,00 € (61,46%)',
+            'Limbo Contabilístico · Discrepância BTOR vs BTF: 2.184,95 € (89,26%)',
             'Gatilho Processual documentado · Art. 344.º n.º 2 CC',
             'NEXUS v13.5.0-PURE · Aguardar evidência · Data Proxy: Fleet Extract',
         ],
         en: [
             'UNIFED – PROBATUM v13.5.0-PURE · DORA COMPLIANT · COURT READY initialising...',
             'ATF Module — Temporal Forensic Analysis active',
-            'SHA-256: d235004a4b463aeb136e6ff208bf7900 · RFC 3161 Timestamping sealed',
+            'SHA-256: 65F805D9649D8C90B042D675B86C703832D847683E2D0FCA9B86C0E82FA20991 · RFC 3161 Timestamping sealed',
             'DAC7 vs SAF-T Recon — Forensic Chain of Custody established',
-            'Accounting Limbo · BTOR vs BTF Discrepancy: €57,658.00 (61.46%)',
+            'Accounting Limbo · BTOR vs BTF Discrepancy: €2,184.95 (89.26%)',
             'Procedural Trigger documented · Reversal of the Burden of Proof',
             'NEXUS v13.5.0-PURE · Awaiting evidence · Data Proxy: Fleet Extract',
         ]
@@ -894,27 +894,27 @@ function buildReportTemplate(lang) {
                 <tbody>
                     <tr>
                         <td>Comissões Extrato / Faturas (Intermediação)</td>
-                        <td>36.154,00 €</td>
-                        <td>93.812,00 €</td>
-                        <td style="color:#d97706; font-weight:bold">+57.658,00 € (159%)</td>
+                        <td>262,94 €</td>
+                        <td>2.447,89 €</td>
+                        <td style="color:#d97706; font-weight:bold">+2.184,95 € (89,26%)</td>
                     </tr>
                     <tr>
                         <td>Diferenciação IVA 23% (Intermediação)</td>
-                        <td>8.315,42 €</td>
-                        <td>21.576,76 €</td>
-                        <td style="color:#d97706; font-weight:bold">+13.261,34 €</td>
+                        <td>60,48 €</td>
+                        <td>563,01 €</td>
+                        <td style="color:#d97706; font-weight:bold">+502,54 €</td>
                     </tr>
                     <tr>
                         <td>Diferenciação IVA 6% (Transporte)</td>
-                        <td>0,00 €</td>
-                        <td>3.459,48 €</td>
-                        <td style="color:#d97706; font-weight:bold">+3.459,48 €</td>
+                        <td>15,78 €</td>
+                        <td>146,87 €</td>
+                        <td style="color:#d97706; font-weight:bold">+131,10 €</td>
                     </tr>
                     <tr>
                         <td>Volume de Negócios Total</td>
-                        <td>333.739,00 €</td>
-                        <td>404.925,00 €</td>
-                        <td style="color:#ca8a04">+71.186,00 € (21,3%)</td>
+                        <td>10.157,73 €</td>
+                        <td>12.342,68 €</td>
+                        <td style="color:#ca8a04">+2.184,95 € (21,5%)</td>
                     </tr>
                 </tbody>
             </table>
@@ -936,15 +936,15 @@ function buildReportTemplate(lang) {
             <h2>6. CONCLUSÃO TÉCNICA E QUANTIFICAÇÃO DO DANO</h2>
             <p>Com base na evidência digital recolhida e processada pelo motor forense UNIFED – PROBATUM v13.5.0-PURE, conclui-se pela <strong>existência de quebra na integridade dos dados fiscais — Discrepância Crítica Detetada</strong>, configurando indícios de infração prevista no RGIT, nomeadamente:</p>
             <ul style="list-style-type: disc; margin-left: 20px;">
-                <li>Dupla discrepância (BTOR vs BTF) — Comissões: <strong>57.658,00 €</strong></li>
-                <li>IVA em falta (23% e 6%) — total: <strong>16.720,82 €</strong></li>
+                <li>Dupla discrepância (BTOR vs BTF) — Comissões: <strong>2.184,95 €</strong></li>
+                <li>IVA em falta (23% e 6%) — total: <strong>633,64 €</strong></li>
                 <li>Discrepância entre valores declarados em DAC7 e registos SAF-T</li>
             </ul>
 
             <h2>6.1 PERDAS DE CHANCE E DANO REPUTACIONAL</h2>
             <p>Para além do prejuízo patrimonial direto quantificado, o presente relatório documenta, nos termos do art. 564.º do Código Civil, a existência de <strong>danos por perda de chance</strong> decorrentes das omissões fiscais identificadas:</p>
             <ul style="list-style-type: disc; margin-left: 20px;">
-                <li><strong>Perda de chance contratual:</strong> A divergência BTOR/BTF de 61,46% constitui impedimento objetivo à obtenção de financiamento, quantificável em função das oportunidades documentadas no período Q1–Q4/2025.</li>
+                <li><strong>Perda de chance contratual:</strong> A divergência BTOR/BTF de 89,26% constitui impedimento objetivo à obtenção de financiamento, quantificável em função das oportunidades documentadas no período Q1–Q4/2025.</li>
                 <li><strong>Dano Reputacional via Risk Scoring AT:</strong> A acumulação de divergências SAF-T/DAC7 (desvio ≥ 21,3% no volume de negócios total) gera degradação objetiva do perfil de risco com impacto mensurável na probabilidade de inspeção externa.</li>
                 <li><strong>Nexo causal documentado:</strong> O Motor ATF v13.5.0-PURE estabelece cronologia determinística satisfazendo a causalidade adequada (art. 563.º CC). Transferência do ónus ao arguido fundamentada — perante o douto tribunal — pela presunção probatória material.</li>
             </ul>
@@ -1001,27 +1001,27 @@ function buildReportTemplate(lang) {
                 <tbody>
                     <tr>
                         <td>Statement Commissions / Invoices (Intermediation)</td>
-                        <td>€36,154.00</td>
-                        <td>€93,812.00</td>
-                        <td style="color:#d97706; font-weight:bold">+€57,658.00 (159%) — Dual Discrepancy</td>
+                        <td>€262.94</td>
+                        <td>€2,447.89</td>
+                        <td style="color:#d97706; font-weight:bold">+€2,184.95 (89.26%) — Dual Discrepancy</td>
                     </tr>
                     <tr>
                         <td>VAT Differentiation 23% (Intermediation)</td>
-                        <td>€8,315.42</td>
-                        <td>€21,576.76</td>
-                        <td style="color:#d97706; font-weight:bold">+€13,261.34 — Missing VAT / Tax Gap</td>
+                        <td>€60.48</td>
+                        <td>€563.01</td>
+                        <td style="color:#d97706; font-weight:bold">+€502.54 — Missing VAT / Tax Gap</td>
                     </tr>
                     <tr>
                         <td>VAT Differentiation 6% (Transport)</td>
-                        <td>€0.00</td>
-                        <td>€3,459.48</td>
-                        <td style="color:#d97706; font-weight:bold">+€3,459.48 — Missing VAT / Tax Gap</td>
+                        <td>€15.78</td>
+                        <td>€146.87</td>
+                        <td style="color:#d97706; font-weight:bold">+€131.10 — Missing VAT / Tax Gap</td>
                     </tr>
                     <tr>
                         <td>Total Turnover</td>
-                        <td>€333,739.00</td>
-                        <td>€404,925.00</td>
-                        <td style="color:#ca8a04">+€71,186.00 (21.3%) — Critical Discrepancy Detected</td>
+                        <td>€10,157.73</td>
+                        <td>€12,342.68</td>
+                        <td style="color:#ca8a04">+€2,184.95 (21.5%) — Critical Discrepancy Detected</td>
                     </tr>
                 </tbody>
             </table>
@@ -1043,15 +1043,15 @@ function buildReportTemplate(lang) {
             <h2>6. TECHNICAL FINDINGS &amp; DAMAGE QUANTIFICATION</h2>
             <p>On the basis of digital evidence processed by the UNIFED – PROBATUM v13.5.0-PURE forensic engine, it is concluded that there exists a <strong>breach of fiscal data integrity — Critical Discrepancy Detected</strong>, constituting prima facie evidence under the General Tax Infraction Regime (RGIT):</p>
             <ul style="list-style-type: disc; margin-left: 20px;">
-                <li>Dual Discrepancy (BTOR vs BTF) — Statement Commissions / Invoices: <strong>€57,658.00</strong></li>
-                <li>Missing VAT / Tax Gap (23% and 6%): <strong>€16,720.82</strong></li>
+                <li>Dual Discrepancy (BTOR vs BTF) — Statement Commissions / Invoices: <strong>€2,184.95</strong></li>
+                <li>Missing VAT / Tax Gap (23% and 6%): <strong>€633.64</strong></li>
                 <li>Discrepancy between DAC7 Compliance values and SAF-T records</li>
             </ul>
 
             <h2>6.1 LOSS OF CHANCE &amp; REPUTATIONAL DAMAGE</h2>
             <p>Beyond the quantified direct patrimonial loss, this report documents, pursuant to Civil Code Art. 564, the existence of <strong>Loss of Chance damages</strong> arising from identified fiscal omissions:</p>
             <ul style="list-style-type: disc; margin-left: 20px;">
-                <li><strong>Contractual Loss of Chance:</strong> The 61.46% BTOR vs BTF Discrepancy constitutes an objective impediment to financing, quantifiable against documented opportunities in Q1–Q4/2025.</li>
+                <li><strong>Contractual Loss of Chance:</strong> The 89.26% BTOR vs BTF Discrepancy constitutes an objective impediment to financing, quantifiable against documented opportunities in Q1–Q4/2025.</li>
                 <li><strong>Reputational Damage via Tax Authority Risk Scoring:</strong> SAF-T/DAC7 divergences (variance ≥ 21.3% in total turnover) objectively degrade the risk profile with measurable impact on external inspection probability.</li>
                 <li><strong>Documented causal link:</strong> The ATF Engine v13.5.0-PURE establishes a deterministic chronology satisfying the adequate causal link requirement (Civil Code Art. 563). Substantive Evidentiary Presumption established — Shifting the Burden to the Defendant — before the Learned Court.</li>
             </ul>
